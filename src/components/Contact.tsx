@@ -1,35 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, Linkedin, Github } from "lucide-react";
-import { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: ""
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you soon!",
-    });
-    setFormData({ name: "", email: "", message: "" });
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
   const contactInfo = [
     {
       icon: Mail,
@@ -71,95 +43,32 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
-          {/* Contact Information */}
-          <div className="space-y-6 animate-fade-in-up">
-            <h3 className="text-2xl font-bold text-foreground mb-6">Contact Information</h3>
-            {contactInfo.map((info, index) => (
-              <Card 
-                key={index}
-                className="shadow-card border-none bg-card/50 backdrop-blur-sm hover:shadow-glow transition-all duration-300"
-              >
-                <CardContent className="p-6 flex items-center gap-4">
-                  <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center flex-shrink-0">
-                    <info.icon className="h-6 w-6 text-primary-foreground" />
-                  </div>
-                  <div className="flex-1">
-                    <p className="text-sm text-muted-foreground">{info.label}</p>
-                    <a 
-                      href={info.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-foreground font-semibold hover:text-primary transition-colors"
-                    >
-                      {info.value}
-                    </a>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          {/* Contact Form */}
-          <Card className="shadow-elegant border-none bg-card/50 backdrop-blur-sm animate-fade-in-up">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold text-foreground mb-6">Send a Message</h3>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                    Name
-                  </label>
-                  <Input
-                    id="name"
-                    name="name"
-                    type="text"
-                    required
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="Your name"
-                    className="w-full"
-                  />
+        {/* Contact Information Grid - Side by Side */}
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6 perspective-1000">
+          {contactInfo.map((info, index) => (
+            <Card 
+              key={index}
+              className="card-3d shadow-card border-none bg-card/50 backdrop-blur-sm hover:shadow-glow transition-all duration-300 animate-fade-in-up"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <CardContent className="p-8 flex items-center gap-6">
+                <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center flex-shrink-0 glow-effect">
+                  <info.icon className="h-8 w-8 text-primary-foreground" />
                 </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                    Email
-                  </label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="your.email@example.com"
-                    className="w-full"
-                  />
+                <div className="flex-1">
+                  <p className="text-sm text-muted-foreground mb-1">{info.label}</p>
+                  <a 
+                    href={info.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-lg text-foreground font-semibold hover:text-primary transition-colors break-all"
+                  >
+                    {info.value}
+                  </a>
                 </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                    Message
-                  </label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    required
-                    value={formData.message}
-                    onChange={handleChange}
-                    placeholder="Your message..."
-                    rows={5}
-                    className="w-full"
-                  />
-                </div>
-                <Button
-                  type="submit"
-                  size="lg"
-                  className="w-full bg-gradient-primary hover:opacity-90 transition-all duration-300"
-                >
-                  Send Message
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </section>
