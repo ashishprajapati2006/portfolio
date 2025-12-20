@@ -49,23 +49,47 @@ export default function Hero() {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
-          {/* Text Content */}
-          <div className="flex-1 text-center lg:text-left space-y-6 animate-fade-in-up">
-            <div className="inline-block">
-              <span className="text-sm font-semibold text-primary uppercase tracking-wider px-4 py-2 bg-primary/10 rounded-full border border-primary/20">
-                Welcome to my portfolio
-              </span>
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-12 max-w-6xl mx-auto">
+          {/* Profile Image - Left Side */}
+          <div className="flex-shrink-0 animate-scale-in">
+            <div className="relative group perspective-1000">
+              {/* Glow effect behind image */}
+              <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-full blur-3xl opacity-30 group-hover:opacity-50 transition-opacity duration-500" />
+              
+              {/* Image container with 3D transform */}
+              <div 
+                className="relative w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl transform-3d transition-transform duration-500 group-hover:scale-105"
+                style={{
+                  transform: `perspective(1000px) rotateY(${mousePosition.x * 0.5}deg) rotateX(${-mousePosition.y * 0.5}deg)`,
+                }}
+              >
+                <img
+                  src="/images/ashish-photo.jpg"
+                  alt="Ashish Prajapati"
+                  className="w-full h-full object-cover"
+                />
+                
+                {/* Overlay gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              </div>
+
+              {/* Floating badge */}
+              <div className="absolute -bottom-4 -right-4 bg-card border-2 border-primary rounded-full px-4 py-2 shadow-lg animate-float">
+                <div className="text-xs font-semibold text-primary">Available for Work</div>
+              </div>
             </div>
-            
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+          </div>
+
+          {/* Text Content - Right Side */}
+          <div className="flex-1 text-center lg:text-left space-y-6 animate-fade-in-up">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               <span className="block text-foreground">Ashish Prajapati</span>
-              <span className="block bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent animate-gradient">
+              <span className="block bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent animate-gradient text-3xl md:text-4xl lg:text-5xl mt-2">
                 IT Student | ML & AI Enthusiast
               </span>
             </h1>
 
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0">
+            <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto lg:mx-0">
               Motivated 3rd-year IT student with strong interest in Machine Learning, Data Science, and AI innovation
             </p>
 
@@ -91,48 +115,18 @@ export default function Hero() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 pt-8 max-w-md mx-auto lg:mx-0">
-              <div className="text-center lg:text-left card-3d p-4 bg-card/50 backdrop-blur-sm rounded-lg border border-border/50">
-                <div className="text-3xl font-bold text-primary">3+</div>
-                <div className="text-sm text-muted-foreground">Hackathons</div>
+            <div className="grid grid-cols-3 gap-4 pt-8 max-w-md mx-auto lg:mx-0">
+              <div className="text-center lg:text-left card-3d p-3 bg-card/50 backdrop-blur-sm rounded-lg border border-border/50">
+                <div className="text-2xl font-bold text-primary">3+</div>
+                <div className="text-xs text-muted-foreground">Hackathons</div>
               </div>
-              <div className="text-center lg:text-left card-3d p-4 bg-card/50 backdrop-blur-sm rounded-lg border border-border/50">
-                <div className="text-3xl font-bold text-primary">2</div>
-                <div className="text-sm text-muted-foreground">Internships</div>
+              <div className="text-center lg:text-left card-3d p-3 bg-card/50 backdrop-blur-sm rounded-lg border border-border/50">
+                <div className="text-2xl font-bold text-primary">2</div>
+                <div className="text-xs text-muted-foreground">Internships</div>
               </div>
-              <div className="text-center lg:text-left card-3d p-4 bg-card/50 backdrop-blur-sm rounded-lg border border-border/50">
-                <div className="text-3xl font-bold text-primary">3+</div>
-                <div className="text-sm text-muted-foreground">Projects</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Profile Image with 3D effect */}
-          <div className="flex-1 flex justify-center lg:justify-end animate-scale-in">
-            <div className="relative group perspective-1000">
-              {/* Glow effect behind image */}
-              <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-full blur-3xl opacity-30 group-hover:opacity-50 transition-opacity duration-500" />
-              
-              {/* Image container with 3D transform */}
-              <div 
-                className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl transform-3d transition-transform duration-500 group-hover:scale-105"
-                style={{
-                  transform: `perspective(1000px) rotateY(${mousePosition.x * 0.5}deg) rotateX(${-mousePosition.y * 0.5}deg)`,
-                }}
-              >
-                <img
-                  src="/images/ashish-photo.jpg"
-                  alt="Ashish Prajapati"
-                  className="w-full h-full object-cover"
-                />
-                
-                {/* Overlay gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              </div>
-
-              {/* Floating badge */}
-              <div className="absolute -bottom-4 -right-4 bg-card border-2 border-primary rounded-full px-6 py-3 shadow-lg animate-float">
-                <div className="text-sm font-semibold text-primary">Available for Work</div>
+              <div className="text-center lg:text-left card-3d p-3 bg-card/50 backdrop-blur-sm rounded-lg border border-border/50">
+                <div className="text-2xl font-bold text-primary">3+</div>
+                <div className="text-xs text-muted-foreground">Projects</div>
               </div>
             </div>
           </div>

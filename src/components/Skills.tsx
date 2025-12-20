@@ -30,7 +30,7 @@ const Skills = () => {
     },
     {
       title: "Core Competency",
-      skills: ["Machine Learning"],
+      skills: ["Machine Learning", "Artificial Intelligence"],
       color: "bg-gradient-primary"
     }
   ];

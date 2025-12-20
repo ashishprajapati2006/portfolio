@@ -42,12 +42,6 @@ const Navigation = () => {
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <button
-            onClick={() => scrollToSection("home")}
-            className="font-heading font-bold text-xl text-foreground hover:text-primary transition-colors"
-          >
-            Ashish Prajapati
-          </button>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
@@ -61,7 +55,6 @@ const Navigation = () => {
               </button>
             ))}
           </div>
-
           {/* Mobile Menu Button */}
           <Button
             variant="ghost"

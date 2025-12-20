@@ -14,13 +14,13 @@ const Achievements = () => {
     {
       title: "TechJam 2.0",
       organization: "Code Rangers × Microsoft",
-      achievement: "National Finalist",
+      achievement: "National Finalist (Top 40)",
       badge: "🏆 Finalist"
     },
     {
       title: "Arjuna 2.0",
       organization: "NIT Agartala",
-      achievement: "National Finalist",
+      achievement: "National Finalist (Top 5)",
       badge: "🏆 Finalist"
     }
   ];
@@ -45,6 +45,16 @@ const Achievements = () => {
       title: "AI/ML for Geodata Analysis",
       issuer: "ISRO",
       url: "https://github.com/ashishprajapati2006/Certificates/blob/main/AI%20ML%20certificate%20isro.png"
+    },
+    {
+      title: "Arjuna 2.0 Hackathon Certificate",
+      issuer: "NIT Agartala",
+      url: "https://github.com/ashishprajapati2006/Certificates/blob/main/Arjuna%202.0%20certificate.png"
+    },
+    {
+      title: "Rajasthan Digifest X Tie Global Hackathon",
+      issuer: "Rajasthan Government",
+      url: "https://github.com/ashishprajapati2006/Certificates/blob/main/Rajasthan%20Digifest%20X%20Tie%20Global%20Hackathon%20certificate.jpg"
     }
   ];
 
