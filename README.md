@@ -1,4 +1,28 @@
-# Welcome to Your Miaoda Project
+# Ashish Prajapati - Personal Portfolio
+
+A modern, responsive personal portfolio website showcasing professional experience, projects, skills, and achievements.
+
+## About
+
+This portfolio website features:
+- **Hero Section**: Professional introduction with call-to-action buttons
+- **About Me**: Overview of background and passion for ML/AI
+- **Skills**: Categorized display of programming languages, technologies, and core competencies
+- **Experience**: Timeline-based professional experience showcase
+- **Projects**: Grid layout featuring ML/AI projects with live demos
+- **Education**: Academic background and achievements
+- **Achievements & Certifications**: Hackathon wins and professional certifications
+- **Contact**: Contact form and social media links
+
+## Features
+
+- 🎨 Modern design with blue/cyan color scheme
+- 📱 Fully responsive (mobile, tablet, desktop)
+- ⚡ Smooth scroll navigation
+- 🎭 Beautiful animations and transitions
+- 🌙 Dark mode support
+- 🚀 Fast loading with Vite
+- ♿ Accessible and SEO-optimized
 
 ## Project Info
 
