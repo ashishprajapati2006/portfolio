@@ -48,10 +48,14 @@ const Projects = () => {
               className="card-3d shadow-card border-none bg-card/50 backdrop-blur-sm hover:shadow-glow transition-all duration-300 overflow-hidden group animate-fade-in-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div 
-                className="h-48 bg-cover bg-center transition-transform duration-300 group-hover:scale-110"
-                style={{ backgroundImage: `url(${project.image})` }}
-              />
+              <div className="h-48 bg-cover bg-center relative overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+              </div>
               <CardHeader>
                 <CardTitle className="text-xl font-bold text-foreground">
                   {project.title}

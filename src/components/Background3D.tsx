@@ -10,6 +10,9 @@ export default function Background3D() {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
+    // Detect mobile device
+    const isMobile = window.innerWidth < 768;
+    
     // Set canvas size
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
@@ -86,9 +89,10 @@ export default function Background3D() {
       }
     }
 
-    // Create particles
+    // Create particles - fewer on mobile
     const particles: Particle[] = [];
-    for (let i = 0; i < 100; i++) {
+    const particleCount = isMobile ? 30 : 100;
+    for (let i = 0; i < particleCount; i++) {
       particles.push(new Particle());
     }
 
@@ -103,21 +107,23 @@ export default function Background3D() {
         particle.draw();
       });
 
-      // Draw connections between nearby particles
-      ctx.strokeStyle = 'rgba(6, 182, 212, 0.1)';
-      ctx.lineWidth = 1;
-      
-      for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
+      // Draw connections between nearby particles - skip on mobile for performance
+      if (!isMobile) {
+        ctx.strokeStyle = 'rgba(6, 182, 212, 0.1)';
+        ctx.lineWidth = 1;
+        
+        for (let i = 0; i < particles.length; i++) {
+          for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < 150) {
-            ctx.beginPath();
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.stroke();
+            if (distance < 150) {
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              ctx.stroke();
+            }
           }
         }
       }

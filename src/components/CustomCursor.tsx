@@ -3,8 +3,21 @@ import { useEffect, useState } from 'react';
 export default function CustomCursor() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    // Check if device is mobile
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768 || 'ontouchstart' in window);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    // Don't render cursor on mobile
+    if (isMobile) {
+      return () => window.removeEventListener('resize', checkMobile);
+    }
+
     const updateCursor = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });
     };
@@ -30,8 +43,12 @@ export default function CustomCursor() {
     return () => {
       window.removeEventListener('mousemove', updateCursor);
       window.removeEventListener('mouseover', handleMouseOver);
+      window.removeEventListener('resize', checkMobile);
     };
-  }, []);
+  }, [isMobile]);
+
+  // Don't render on mobile
+  if (isMobile) return null;
 
   return (
     <div

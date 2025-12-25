@@ -1,5 +1,7 @@
-import Index from './pages/Index';
+import { lazy } from 'react';
 import type { ReactNode } from 'react';
+
+const Index = lazy(() => import('./pages/Index'));
 
 interface RouteConfig {
   name: string;
