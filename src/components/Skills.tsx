@@ -23,6 +23,7 @@ const Skills = () => {
         "Matplotlib",
         "Seaborn",
         "Scikit-learn",
+        "Hugging Face",
         "VS Code",
         "Colab"
       ],
@@ -30,7 +31,7 @@ const Skills = () => {
     },
     {
       title: "Core Competency",
-      skills: ["Machine Learning", "Artificial Intelligence"],
+      skills: ["Machine Learning","Deep Learning","Natural Language Processing", "Artificial Intelligence"],
       color: "bg-gradient-primary"
     }
   ];

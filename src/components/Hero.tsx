@@ -44,7 +44,8 @@ export default function Hero() {
   }, [isMobile]);
 
   const handleDownloadResume = () => {
-    window.open('https://github.com/ashishprajapati2006/Certificates/blob/main/Ashish%20Resume.pdf', '_blank');
+    // Open PDF in new tab for viewing and downloading
+    window.open('/resume/Ashish Resume.pdf', '_blank');
   };
 
   const scrollToContact = () => {

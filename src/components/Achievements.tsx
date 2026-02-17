@@ -29,32 +29,32 @@ const Achievements = () => {
     {
       title: "Industrial Training Certificate",
       issuer: "MNIT, Jaipur",
-      url: "https://github.com/ashishprajapati2006/Certificates/blob/main/MNIT_ashish_certificate.pdf"
+      url: "/Certificate/MNIT_ashish_certificate.pdf"
     },
     {
       title: "Industrial Training Certificate",
       issuer: "PharmSight Research and Analytics",
-      url: "https://github.com/ashishprajapati2006/Certificates/blob/main/Ashish%20Pharmsight%20certi.pdf"
+      url: "/Certificate/Ashish Pharmsight certi.pdf"
     },
     {
       title: "National CyberShield Hackathon Certificate",
       issuer: "MP Police",
-      url: "https://github.com/ashishprajapati2006/Certificates/blob/main/National%20Cybershield%20Hackathon%20Certi.jpg"
+      url: "/Certificate/National Cybershield Hackathon Certi.jpg"
     },
     {
       title: "AI/ML for Geodata Analysis",
       issuer: "ISRO",
-      url: "https://github.com/ashishprajapati2006/Certificates/blob/main/AI%20ML%20certificate%20isro.png"
+      url: "/Certificate/AI ML certificate isro.png"
     },
     {
       title: "Arjuna 2.0 Hackathon Certificate",
       issuer: "NIT Agartala",
-      url: "https://github.com/ashishprajapati2006/Certificates/blob/main/Arjuna%202.0%20certificate.png"
+      url: "/Certificate/Arjuna 2.0 certificate.png"
     },
     {
       title: "Rajasthan Digifest X Tie Global Hackathon",
       issuer: "Rajasthan Government",
-      url: "https://github.com/ashishprajapati2006/Certificates/blob/main/Rajasthan%20Digifest%20X%20Tie%20Global%20Hackathon%20certificate.jpg"
+      url: "/Certificate/Rajasthan Digifest X Tie Global Hackathon certificate.jpg"
     }
   ];
 

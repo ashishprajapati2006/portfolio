@@ -6,12 +6,36 @@ import { Badge } from "@/components/ui/badge";
 const Projects = () => {
   const projects = [
     {
+      title: "Multi Language Translator",
+      description: "Combines fine-tuned mBART (Transformer) and custom LSTM Seq2Seq for accurate and flexible translation. Transfer learning implementation with pre-trained mBART for domain-specific translation, Flask and Streamlit apps with Hugging Face integration",
+      technologies: ["mBART", "Transformer", "LSTM", "Flask", "Streamlit", "Hugging Face"],
+      github: "https://github.com/ashishprajapati2006/Multi-Language-Translator",
+      demo: "https://multi-language-translator.streamlit.app/",
+      image: "/img/Multi Language Translator.jpeg"
+    },
+    {
+      title: "Face Mask Recognizer",
+      description: "CNN-based face mask detection model for images and live video. TensorFlow/Keras CNN with OpenCV, delivered via Streamlit/Flask. Supports single-image, group-photo, and webcam inference",
+      technologies: ["CNN", "TensorFlow", "Keras", "OpenCV", "Streamlit", "Flask"],
+      github: "https://github.com/ashishprajapati2006/Face-Mask-recognition",
+      demo: "https://face-mask-recognition.streamlit.app/",
+      image: "/img/FACE MASK RECOGNIZER.jpeg"
+    },
+    {
+      title: "Movie Sentiment Analysis System",
+      description: "Built a sentiment analyzer using SimpleRNN deep learning model trained on IMDB dataset. Implemented preprocessing pipeline with word embedding (128-dim), sequence padding, and binary classification with sigmoid activation",
+      technologies: ["SimpleRNN", "Deep Learning", "Python", "IMDB", "Streamlit"],
+      github: "https://github.com/ashishprajapati2006/Movie-Sentiment-Analyzer",
+      demo: "https://movie-sentiment-analyzer-app.streamlit.app/",
+      image: "/img/MOVIE SENTIMENT ANALYSIS SYSTEM.jpeg"
+    },
+    {
       title: "Multiple Disease Prediction System",
       description: "Multi-disease prediction system for Diabetes, Heart Disease, and Parkinson's using SVM, integrated into one Streamlit web app with user-friendly UI",
       technologies: ["Python", "SVM", "Streamlit"],
       github: "https://github.com/ashishprajapati2006/Multiple-disease-prediction-system",
       demo: "https://multiple-disease-prediction-system-j33cjgvi47vrzknqyigkag.streamlit.app/",
-      image: "https://miaoda-site-img.s3cdn.medo.dev/images/7dc6801a-dc81-4645-bd1b-0df2f9868765.jpg"
+      image: "/img/multiple disease prediction systeam.jpeg"
     },
     {
       title: "Forest Fire Weather Index (FWI) Prediction System",
@@ -19,7 +43,7 @@ const Projects = () => {
       technologies: ["Python", "Ridge Regression", "Streamlit"],
       github: "https://github.com/ashishprajapati2006/Fire-Weather-Index",
       demo: "https://fire-weather-index.streamlit.app/",
-      image: "https://miaoda-site-img.s3cdn.medo.dev/images/f3eb4d6d-6e99-4955-bd3b-d845c7064444.jpg"
+      image: "/img/Forest Fire Weather Index (FWI) Prediction System.jpeg"
     },
     {
       title: "Student Performance Prediction System",
@@ -27,7 +51,7 @@ const Projects = () => {
       technologies: ["Python", "Machine Learning", "Flask", "Streamlit"],
       github: "https://github.com/ashishprajapati2006/student-performance-flask",
       demo: "https://student-exam.streamlit.app/",
-      image: "https://miaoda-site-img.s3cdn.medo.dev/images/f1f082f0-8e13-4fb6-81f2-1f39c80b054c.jpg"
+      image: "/img/Student Performance Prediction System.jpeg"
     }
   ];
 
