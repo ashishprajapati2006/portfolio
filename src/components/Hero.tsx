@@ -147,7 +147,7 @@ export default function Hero() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-4 pt-8 max-w-md mx-auto lg:mx-0">
               <div className="text-center lg:text-left card-3d p-3 bg-card/50 backdrop-blur-sm rounded-lg border border-border/50">
-                <div className="text-2xl font-bold text-primary">3+</div>
+                <div className="text-2xl font-bold text-primary">5+</div>
                 <div className="text-xs text-muted-foreground">Hackathons</div>
               </div>
               <div className="text-center lg:text-left card-3d p-3 bg-card/50 backdrop-blur-sm rounded-lg border border-border/50">
@@ -155,7 +155,7 @@ export default function Hero() {
                 <div className="text-xs text-muted-foreground">Internships</div>
               </div>
               <div className="text-center lg:text-left card-3d p-3 bg-card/50 backdrop-blur-sm rounded-lg border border-border/50">
-                <div className="text-2xl font-bold text-primary">3+</div>
+                <div className="text-2xl font-bold text-primary">6+</div>
                 <div className="text-xs text-muted-foreground">Projects</div>
               </div>
             </div>
